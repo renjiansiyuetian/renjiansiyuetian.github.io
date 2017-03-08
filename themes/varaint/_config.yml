@@ -1,0 +1,60 @@
+
+
+# site icon
+favicon: /favicon.png
+
+# author headimg
+headimg: http://oct8d1mqf.bkt.clouddn.com/2016-10-17-15%3A42%3A28.jpg
+
+# search
+search: 
+    enable: true
+    placeholder: Enter Key...
+
+# sidebar
+sidebar: 
+  enable: true
+  menus:
+    -
+      name: CSDN
+      link: http://blog.csdn.net/study724
+      target: _blank
+    -
+      name: 前端网
+      link: http://www.qdfuns.com/house/34413/note
+      target: _blank
+    -
+      name: 简书
+      link: http://www.jianshu.com/u/362f99888f93	
+      target: _blank  
+# comments
+comments:
+  duoshuo_username:  wanglianhui
+  #disqus_username: wanglianhui
+
+# accounts support weibo/github/zhihu/twitter/douban 
+# display to former three
+social: 
+  -
+    name: weibo
+    link: http://weibo.com/lotusPeak/
+  -
+    name: github
+    link: https://github.com/renjiansiyuetian
+  -
+    name: zhihu
+    link: https://www.zhihu.com/people/leisureLotus
+  -
+    name: jianshu
+    link: http://www.jianshu.com/u/362f99888f93	
+#  -
+#    name: twitter
+#    link: http://www.jianshu.com/u/362f99888f93
+#  -
+#    name: douban
+#    link: 
+
+
+
+
+
