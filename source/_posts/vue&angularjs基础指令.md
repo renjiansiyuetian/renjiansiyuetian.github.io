@@ -8,7 +8,7 @@ categories: ['js框架杂烩']
 ---
 学过angularjs的同学，上手vue应该会特别简单。vue从某些方面上来说，就是简版的angularjs。
 ## 基础性使用
-
+<!-- more -->
 ### 基础指令相比较
 
 |  vue  | angularjs | 作用 | 使用是否相同 | 不同点 |
