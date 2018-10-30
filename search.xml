@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[js-es6 经常使用]]></title>
+    <url>%2F2019%2F01%2F05%2Fjs-es6%20%E7%BB%8F%E5%B8%B8%E4%BD%BF%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[对象解包 const {a, b} = obj直接能用变量a、b 数组解包 […state.cart.added] async -&gt;await-&gt;Promise es6 的`` 要用一堆的’+’号来连接文本与变量，而使用ES6的新特性模板字符串``后，例如: &lt;Link to={`/taco/${taco.name}`}&gt;{taco.name} es6对象解构 let cat = ‘ken’let dog = ‘lili’let zoo = {cat, dog} 等价于 {cat: cat, dog: dog}相反可以写为:let dog = {type: ‘animal’, many: 2}let { type, many} = dog … 的使用 function animals(…types){ console.log(types)}animals(‘cat’, ‘dog’, ‘fish’) //[“cat”, “dog”, “fish”] es6 文件以及文件里的函数 引入引出 //index.jsimport animal from ‘./content’//content.jsexport default ‘A cat’]]></content>
+      <categories>
+        <category>es6</category>
+      </categories>
+      <tags>
+        <tag>es6</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[git]]></title>
+    <url>%2F2018%2F11%2F28%2Fgit%2F</url>
+    <content type="text"><![CDATA[1、npm与yarn常用命令对比 2、git 撤销 git reflog (可以查看所有分支的所有操作记录（包括commit和reset的操作），包括已经被删除的commit记录，git log则不能察看已经删除了的commit记录)git reset –hard (commit id) 回退到某版本git push origin (branch) 提交到远端]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js项目小记录]]></title>
+    <url>%2F2018%2F08%2F12%2Fjs%E9%A1%B9%E7%9B%AE%E5%B0%8F%E8%AE%B0%E5%BD%95%2F</url>
+    <content type="text"><![CDATA[1、a标签上的，防止链接被随意修改而改变了跳转地址。 rel=”noreferrer” rel=”noopener” 可合并为：rel=”noopener noreferrer” /// a标签上的，防止链接被随意修改而改变了跳转地址。在跳转到第三方网站的时候，为了 SEO 权重，还建议带上 rel=”nofollow”:rel=”noopener noreferrer nofollow”{ 如果网站使用了 ，那么新打开的标签页的性能将会影响到当前页面。此时如果新打开的页面中执行了一个非常庞大的 JavaScript 脚本，那么原始标签页也会受到影响，会出现卡顿的现象（当然不至于卡死）。而如果在链接中加入了 noopener，则此时两个标签页将会互不干扰，使得原页面的性能不会受到新页面的影响。} 为了保护稍旧的“近代”浏览器或是很旧的“古代”浏览器甚至是“远古”浏览器，只有 noopener 属性还是远远不够的:“use strict”;function openUrl(url) { var newTab = window.open(); newTab.opener = null; newTab.location = url;}]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[mac破解webstorm2018.15]]></title>
+    <url>%2F2018%2F05%2F16%2Fmac%E7%A0%B4%E8%A7%A3webstorm2018.15%2F</url>
+    <content type="text"><![CDATA[1、先下载网上的此软件进行安装。 2、安装完毕后，在终端输入”sudo vim /etc/hosts”,对hosts进行编辑。 3、在终端进入hosts得编辑模式，在最后一行加上”0.0.0.0 account.jetbrains.com”,完毕后保存退出即可。4、打开网站http://idea.lanyus.com/，点击获取注册码，先复制获得的注册码。然后打开webstorm软件，点击help/帮助，进入register/注册页面，选择Activation code选项并将复制内容粘贴在其下的方框中，点击OK即可。如果在软件的右下角弹出Registration Your copy is licensed to lan yu便是注册破解成功了。]]></content>
+      <categories>
+        <category>webstorm</category>
+      </categories>
+      <tags>
+        <tag>webstorm2018.15</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[css 问题小记录]]></title>
+    <url>%2F2018%2F02%2F22%2Fcss-%E9%97%AE%E9%A2%98%E5%B0%8F%E8%AE%B0%E5%BD%95%2F</url>
+    <content type="text"><![CDATA[解决h5页面在ios上卡顿: 在总的css控制里添加： *{ -webkit-overflow-scrolling: touch; } 通过媒体查询可以为不同大小和尺寸的媒体定义不同的css，适应相应的设备的显示。 里边&lt;link rel=”stylesheet” type=”text/css” href=”xxx.css” media=”only screen and (max-device-width:480px)”&gt; CSS : @media only screen and (max-device-width:480px) {/css样式/} 伪类(:)的操作对象是文档树中已有的元素，而伪元素(::)则创建了一个文档数外的元素。 让页面里的字体变清晰，变细用CSS怎么做？ -webkit-font-smoothing在window系统下没有起作用，但是在IOS设备上起作用-webkit-font-smoothing：antialiased是最佳的，灰度平滑。 position:fixed;在android下无效怎么处理? png、jpg、gif 这些图片格式解释一下，分别什么时候用。有没有了解过webp？ png是便携式网络图片（Portable Network Graphics）是一种无损数据压缩位图文件格式.优点是：压缩比高，色彩好。 大多数地方都可以用。 jpg是一种针对相片使用的一种失真压缩方法，是一种破坏性的压缩，在色调及颜色平滑变化做的不错。在www上，被用来储存和传输照片的格式。 gif是一种位图文件格式，以8位色重现真色彩的图像。可以实现动画效果. webp格式是谷歌在2010年推出的图片格式，压缩率只有jpg的2/3，大小比png小了45%。缺点是压缩的时间更久了，兼容性不好，目前谷歌和opera支持。 关于目前的仿原生开发]]></content>
+      <categories>
+        <category>css</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[vue 项目遇到问题小结]]></title>
+    <url>%2F2018%2F01%2F16%2Fvue%E9%A1%B9%E7%9B%AE%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98%E5%B0%8F%E7%BB%93%2F</url>
+    <content type="text"><![CDATA[vue问题小结1）引入全局的scss（一般在app.vue里引入），其中若涉及@mixin 与 @include，样式不起作用。2）布局样式重置全局样式，无效，必须去掉scoped。3）将ui框架组件集合在一起全局声明。4）v-for 报错，解决方式: 加上属性:key=“item.id”便可。5）兄弟组件之间调用函数： 在离开页面时执行并解除绑定beforeDestroy: function () {this.$off(‘updateProfile’, this.updateProfile())}在离开页面时，获取从哪来到哪去beforeRouteLeave: function (to, from, next) {if (to.name !== ‘BalanceHistory’) {localStorage.removeItem(‘query’)}next()}, 6）watch里面 es6语法不能用（2017年时候）。7）新的2.0循环 新数组语法value in arr(value, index) in arr新对象语法value in obj(value, key) in obj(value, key, index) in obj 8）vue循环过滤 v-for=”val in arr | limitBy 2” 在2.0之后不能再用，用computed代替：computed: {filteredItems: function () {return this.items.slice(0, 10)}}v-for=”val in filteredItems” 9）$set 在js中是这样 arr[id] = value, 这样便完成了可以通过下标设置值。但是在vue中，这样虽然也可以，但是其后期值得变化更新是不会同步到dom上的，所以，需用此代替:this.$set(this.arr, id, value)。其中,this为vue对象。官方文档是如此介绍：vue-set设置对象的属性。如果对象是响应式的，确保属性被创建后也是响应式的，同时触发视图更新。这个方法主要用于避开 Vue 不能检测属性被添加的限制。 10）页面传值 赋值:this.$router.push({ name: ‘xx’, query: this.q })接收：if(Object.keys(this.$route.query).length &gt; 0) {this.q = this.$route.query} 11）vue中通过$ref操作dom 例如:&lt;ul&gt; &lt;li ref=“li”&gt;&lt;/li&gt; &lt;li ref=“li”&gt;&lt;/li&gt; &lt;li ref=“li”&gt;&lt;/li&gt; &lt;/ul&gt; 则加class li样式时，则可以如此(注意li上的id是唯一的): changeItem (ob) { this.$refs.li.forEach((item, index) =&gt; { if (this.$refs.li[index].id === ob.target.id) { this.$refs.li[index].className = &apos;li&apos; } else { this.$refs.li[index].className = &apos;&apos; } }) } 12）在子组件中修改父组件的值 父组件中: &lt;select-option class=”bottom” :banks=”banks” :currentBank.sync=“currentBank”&gt;&lt;/select-option&gt; 注意父组件中的sync后带着的变量currentBank。——————————————————————————————————————子组件中:在子组件里可以如此去修改currentBank的值: this.$emit(‘update:currentBank’, item) 13）mode为history，刷新失效 mode: ‘history’,可以使路由去掉#，但是会使本路由刷新(比如本路由的参数变化时，理想情况是本页面数据也变化)失效。解决方法: 在对应的router-view上加key： &lt;router-view :key=“routeKey&quot;&gt;&lt;/router-view&gt; computed: { routeKey () { return `${this.$route.path}` } }, 14）页面数据不刷新 当你设置 vm.someData = ‘new value’ ，该组件不会立即重新渲染。可以在数据变化之后立即使用 Vue.nextTick(callback)。 15）组件 Vue 组件的 API 来自三部分 - props, events 和 slots ：Props 允许外部环境传递数据给组件Events 允许组件触发外部环境的副作用Slots 允许外部环境将额外的内容组合在组件中。 16）Vuex 1、在使用store时，尽量用commit来触发mutation达到改变state数据的目的。2、通过在根实例中注册 store 选项，该 store 实例会注入到根组件下的所有子组件中，且子组件能通过 this.$store 访问到。3、在组件中使用 this.$store.dispatch(‘xxx’) 分发 action。 17) 数据渲染 初始化数据时，用mounted钩子，但不能保证实例已经插入到文档，所以在钩子函数里包含 Vue.nextTick():mounted: function () {this.$nextTick(function(){//保证this.$el已经插入文档})} 18)其它vue问题小结（某位同学的）https://segmentfault.com/a/1190000005832164http://web.jobbole.com/93298/]]></content>
+      <categories>
+        <category>vue</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[vue之小功能记录]]></title>
+    <url>%2F2017%2F12%2F20%2Fvue%E4%B9%8B%E5%B0%8F%E5%8A%9F%E8%83%BD%E8%AE%B0%E5%BD%95%2F</url>
+    <content type="text"><![CDATA[一、滚动展示字 1）得知目前所有文字区域（包含隐藏起来的区域）的高度（clientHeight），减去展现出来的区域(以下以father称呼)高度，得文字的滚动区域（以下以scrollContent称呼）高度。2) 将滚动区域scrollContent的设置为absolute，将展现出来的区域father设置为relative，通过计时器setInterval一定时间内挪动一定的距离便可。 参考代码如下：bind: (el) =&gt; { Vue.nextTick(() =&gt; { // bind 为自定义指令时的触发信号之一（ 只调用一次，指令第一次绑定到元素时调用，用这个钩子函数可以定义一个在绑定时执行一次的初始化动作）。nextTick()函数为该页面数据渲染完毕后执行，这样就可以得到真是的文字(后台返回)高度。 let scrollTop = el.clientHeight - 200 // 200为父亲高度，如此得滚动区域(scrollContent)高度 let tempTop = 0 function getInterval () { el.intervalTime = setInterval(() =&gt; { tempTop = -1 + tempTop // 1px为每次移动距离，如此计算为总的移动距离 if (-tempTop &gt; scrollTop) { el.style.top = 0 + &apos;px&apos; tempTop = 0 } else { // 执行条件为总的移动距离 小于 滚动区域(scrollContent)高度 el.style.top = tempTop + &apos;px&apos; } }, 50) } el.addEventListener(&apos;touchstart&apos;, () =&gt; { // 监听关闭 window.clearInterval(el.intervalTime) el.intervalTime = null }) el.addEventListener(&apos;touchend&apos;, () =&gt; { // 监听再次开启 if (el.intervalTime !== null) { return } getInterval() }) // end }) }]]></content>
+      <categories>
+        <category>vue</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[vue项目搭建]]></title>
+    <url>%2F2017%2F11%2F01%2Fvue%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA%2F</url>
+    <content type="text"><![CDATA[插件结合搭建vue项目1) axios: https://github.com/superman66/vue-axios-github2) 基于 vue + element-ui 的后台管理系统: https://github.com/bailicangdu/vue2-manage3) 基于vue+vue-router+vuex+axios+webpack开发的个人Demo:https://github.com/hzzly/xyy-vue4) 搭建vue2(用的gulp)： https://github.com/lzxb/vue2-demo5) vue2.0的一些文章: https://github.com/WYseven/vue2-basic-demo6) 搭建vue2.0很不错的文章：https://segmentfault.com/a/1190000007630677#articleHeader7 {(初级搭建是根据此文章搭建的) 后继：根据上述资料设置sass与axios:npm install node-sass –save-devnpm install sass-loader –save-devnpm install axios —savenpm install vuex-router-sync —savenpm install eslint-friendly-formatter —save-dev根据1）中axios配置http响应配置 autoprefix即自动加上css前缀:{npm install postcss postcss-cssnext —save-dev然后在vue-loader.conf.js里配置:postcss: [require(‘postcss-cssnext’)()] 例如:module.exports = { loaders: utils.cssLoaders({ sourceMap: isProduction ? config.build.productionSourceMap : config.dev.cssSourceMap, extract: isProduction, postcss: [require(&apos;postcss-cssnext&apos;)()] }), postcss:[require(&apos;postcss-px2rem&apos;)({&apos;remUnit&apos;:37.5, &apos;baseDpr&apos;: 1})], transformToRequire: { video: &apos;src&apos;, source: &apos;src&apos;, img: &apos;src&apos;, image: &apos;xlink:href&apos; } } }7) vuex-router-sync: Effortlessly keep vue-router and vuex store in sync。主要是把 vue-router 的状态放进 vuex 的 state 中，这样就可以通过改变 state 來进行路由的一些操作。8) vue插件机制及模板渲染: https://github.com/Cyrilszq/Cyril-Blog/issues/29) postcss 与Autoprefixer的区别: ~ 两者都是基于 CSS 处理框架 postcss 的（postcss 就是 Autoprefixer 的作者把 Autoprefixer 从另一个 CSS 处理框架 rework 中迁移出来时搞的）。相比之下，Autoprefixer 更加具有实用价值，而 cssnext 实现的功能以后浏览器会怎么实现还存疑，感觉只能玩玩。~ cssnext: CSS 的转译器（transpiler），根据目前仍处于草案阶段、未被浏览器实现的标准把代码转译成符合目前浏览器实现的 CSS。类似 ES6 的 Babel。转译时因为也要处理前缀问题，所以直接依赖了 Autoprefixer 来做这个部分~ autoprefixer 只加前缀，cssnext 依赖 autoprefixer(core) ，并附带其他功能。]]></content>
+      <categories>
+        <category>vue</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[总结动画(基础篇)]]></title>
+    <url>%2F2017%2F07%2F19%2F%E6%80%BB%E7%BB%93%E5%8A%A8%E7%94%BB(%E5%9F%BA%E7%A1%80%E7%AF%87)%2F</url>
+    <content type="text"><![CDATA[一、过渡transform transform 其为变形的基础，属性能对元素对象进行变形操作，主要包括以下几种：旋转rotate、缩放scale、移动translate、倾斜skew以及矩阵变形matrix。 translate translateZ：在Z轴移动元素，前提是元素本身或者元素的父元素设定了透视值。 skew 只是在x、y轴 倾斜，没z轴一说。 rotate 单纯的rotate旋转，正值顺时针，负值逆时针 3D旋转方框: | | X: 以方框x轴，从下向上旋转； Y: 以方框y轴，从左向右旋转； Z: 以方框中心为原点，顺时针旋转 rotateX(a)函数功能等同于rotate3d(1,0,0,a) rotateY(a)函数功能等同于rotate3d(0,1,0,a) rotateZ(a)函数功能等同于rotate3d(0,0,1,a) 注释： a指的是一个旋转角度值。 turn是圈，1turn = 360deg； 另外还有弧度rad，2πrad = 1turn = 360deg。 如，transform:rotate(2turn); //旋转两圈 scale 3D缩放缩放值在[0.01, 1)区间时，为缩小；当值大于1时，为放大。 X：以方框Y轴，左右变宽； Y: 以方框X轴，上下变高; Z: 看不出变换。scale3d(1,1,sz)，其效果等同于scaleZ(sz)。注意的是scale 3D变换单独使用时，是没有效果的，需配合其它变形函数才能有效果。 perspective 对3D变换很是重要，不然Z轴所有的点都有投射到一个平面上 以上是2D、3D变换，变换过程的时间与速度的控制，就需要transition了。 transition transition 时间与速度 transition-property 控制的是哪个属性，比如:width。如果是all（也是默认值）,就是全部控制。 transition-duration 控制运行时间,如.2s transition-timing-function 控制过渡的效果,如ease-in transition-delay 控制延迟时间,如.1s综上，transition可合并2）3 ) 4) 5)使用，如transition: all .2s ease-in .1s 注意: transform-origin是可以改变变形原点，但是其影响到的变形函数只有rotate()； transform-style决定是以2D展现，还是3D展现； perspective-origin是定3D元素的底部位置，只能和perspective配合使用。 二、动画 先是定义animation-name,即动画名称。其实现是通过关键字@keyframes定义的，例如:@keyframes test { from { top: 0px } to { top: 50px } } 定义完动画，便是控制了，属性有下: animation-duration: 动画时间； animation-timing-function: 动画效果; animation-delay: 延迟时间; animation-iteration-count: 播放次数 animation-direction: 播放方向 animation-fill-mode: 播放停止时的状态 animation-play-state: 播放的过程中有干扰时(比如:hover)，所执行的状态 同过渡，animation也是可以合并简写,其简写方式为: animation: animation-name, animation-duration, animation-timing-function, animation-delay, animation-iteration-count, animation-direction 和 animation-fill-mode.]]></content>
+      <categories>
+        <category>css</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[css 基础经常使用]]></title>
+    <url>%2F2017%2F06%2F27%2Fcss-%E5%9F%BA%E7%A1%80%E7%BB%8F%E5%B8%B8%E4%BD%BF%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[换行省略overflow: hidden; text-overflow: ellipsis; white-space: nowrap; 强制换行white-space: normal; //中英文都支持 word-wrap: break-word; //支持英文 word-break: break-all; //支持英文 多行省略display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; text-overflow: ellipsis; 宽度已知，让高度与宽度1:1变化例如: .item-flex { width: 102px; .img-flex { height: 0px; padding-bottom: 100%; }} 采用的方法是利用了padding-top/padding-bottom属性,根据他的解释,`padding’如果是百分比的话,那这个百分比是相对于其父元素的宽度而言的。 资料:来源http://www.jianshu.com/p/56a3adebdb01/ 而作者使用到了另一个属性overflow,另外，在计算 Overflow 时，是将元素的内容区域（即 width / height 对应的区域）和 Padding 区域一起计算的。换句话说，即使将元素的 overflow 设置为 hidden，“溢出”到 Padding 区域的内容也会照常显示。** 这样就能使用padding-top/padding-bottom来代替height属性了.比如你想要让元素的按在4:3的比例显示,width设置成了30%,那么padding-top/padding-bottom只需要设置成为40%就可以了.同时把height设为0.css代码如下: .img-3-4 { margin: 10px; padding-bottom: 30%; width: 40%; height: 0; background-color: #dbe0e4; } 5.在每一个item中的图片都能按照规定的比例显示.对于image标签来说,如果是自然的显示原图片的比例 .img { display: block; max-width: 100%; height: auto; } 6.flex布局:http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html 7.头部meta设置http://blog.csdn.net/huang100qi/article/details/42596799 8.vertical-align vertical-align对块状水平的元素是没有效果的。 https://segmentfault.com/a/1190000002668492 Vertical-align被用于垂直对齐inline元素，也就是display值为inline和inline-block的元素。 vertical-align基线改变： a:普通inline-block的基线是文字内容的下边界； b:overflow不为visible的与设置了height的，基线都为margin-box的下边界。 9.contenteditable属性兼容所有浏览器 &lt;div contenteditable=“true&quot;&gt;可以编辑里面的内容&lt;/div&gt; 10.左边定宽，右边自适应 首先，aside定宽 section不定宽度 &lt;aside&gt;left&lt;/aside&gt; &lt;section&gt;right&lt;/section&gt; 左边设置左浮动，右边宽度仅设置100%.left{ float:left; } .right{ width:100% } 父容器设置display:flex，right部分设置flex:1.father { display:flex } .right {flex:1} 设置左右浮动，右边的浮动width为calc(100vw-200px).left { float:left } .right{ float:right; width:calc(100vw-200px) } 用负margin，页面结构：&lt;div class=“container”&gt; &lt;section class=“right”&gt;right&lt;/section&gt; &lt;/div&gt; &lt;aside class=“left”&gt; left &lt;/aside&gt; 设置样式：.container { float:left; width:100%; } .right{ margin-left:200px; } .left{ float:left; margin-left:-100%; } 11.box-sizing box-sizing:content-box/border-box/inherit content-box——默认值，采用Standard box model border-box——采用IE box model inherit——继承父元素属性值 12.局部图片滑动 在要滑动的list img之前，加上父亲元素outer和inner。将outer设置为: .outer { position: relative; overflow: hidden; min-height: XX px; } .inner { position: absolute left: 0; right: 0; overflow-x: scroll; overflow-y: hidden; } 然后 list img正常设置便可。 13.input date的兼容性问题 Input date在pc端的兼容性还是比较差的，除了chrome支持以为，其它几乎都不能使用。但在移动端的兼容性还是可以的。故如若在移动端使用，还需要考虑其placeholder的兼容性，因为placeholder仅在pc端显示，在移动端是不支持的。解决方案： 通过标签上某个属性的改变,从而仿placeholder，例如: //当有值时，设置其添加class空样式: has-value,没有值时便显示placeholder input[type=&quot;date&quot;]:not(.has-value):before { color: grey; content: attr(placeholder); } // 清空placeholder的条件 input[readonly]:before { content: &apos;&apos;; } 14.JPEG、PNG、SVGhttp://web.jobbole.com/91599/ JPEG适用于亮度与色彩压缩。 PNG对于线条图，LOGO，图标和颜色较少的图像非常适合。 SVG在线条艺术，LOGO，图标，插画和数据可视化方面用途广泛。 15.头部中部尾部布局 1)头尾fixed,中部absolutehtml,body{width:100%;height:100%;position:relative;} #body-container{width:100%;height:100%;position:absolute;left:0;top:0;} #header{position:fixed;left:0;top:0;width:100%;height:49px;} #content{position:absolute;left:0;right:0;top:49px;bottom:44px;overflow-y:auto;} #footer{position:fixed;left:0;;bottom:0;width:100%;height:44px;} 2)lex布局（仿照手机淘宝布局）*{margin:0;padding:0;} html,body{width:100%;height:100%;position:relative;} #body-container{width:100%;height:100%;display:flex;flex-direction:column;} #header{height:49px;flex:none;} #content{flex:1 1 auto;overflow-y:auto;} #footer{height:44px;flex:none;} 16.clearfix进化史http://web.jobbole.com/85965/ 17.宽比成比例的 width: 100%; height: 0px; padding-bottom: 50%; display: inline; 18.pre换行 white-space:pre-wrap; word-wrap: break-word; 19.video的坑http://web.jobbole.com/93251/ &lt;video controls&gt; source src=&quot;https://chimee.org/vod/2.webm&quot;&gt; source src=&quot;https://chimee.org/vod/2.ogg&quot;&gt; source src=&quot;https://chimee.org/vod/2.mp4&quot;&gt; source src=&apos;https://chimee.org/x.myvideoext&apos; type=&apos;video/mp4; codecs=&quot;mp4v.20.8, mp4a.40.2&quot;&apos;&gt; p&gt;当前环境不支持video标签。p&gt; &lt;/video&gt; 20.杂项 AA:大转盘http://www.daxueit.com/article/16703.html BB:移动端问题记录http://blog.csdn.net/k513492640/article/details/73997607 CC:前端踩坑大杂烩http://www.cnblogs.com/fastmover/p/4873765.html DD:remhttps://mp.weixin.qq.com/s?__biz=MzAxODE2MjM1MA==&amp;mid=2651552493&amp;idx=1&amp;sn=84144094bfcbbca5c3f78907f49d4787&amp;chksm=8025ad2cb752243aa0d6975cbeaf95490810fe456f00f8562bde7aeb3366c0bbd9a4f516271f&amp;scene=0&amp;key=e4a4e74651de5963d522bfff8727ce52c074dbd253178438b52bd5b53a9a5a6d2b20704bf69eb40d56e6f71a42544927d99ef5ac2762df11bd170e348b6aa0b10e751f85db359075f67f7f014cfbf968&amp;ascene=0&amp;uin=MjY2MDUwNzgxOQ%3D%3D&amp;devicetype=iMac+MacBookPro13%2C1+OSX+OSX+10.12.3+build(16D30)&amp;version=12020810&amp;nettype=WIFI&amp;fontScale=100&amp;pass_ticket=2dqCIt261iAAt7GpaL0SRS%2F4Mid9NkzIn3iVdaL5FsJG2e61K0rbo5lgjkV6lkfg EE: 利用视口单位实现适配https://aotu.io/notes/2017/04/28/2017-4-28-CSS-viewport-units/]]></content>
+      <categories>
+        <category>css</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[webFront]]></title>
+    <url>%2F2017%2F03%2F13%2FwebFront%2F</url>
+    <content type="text"><![CDATA[###前端知识小结 2015~2016]]></content>
+      <categories>
+        <category>webFront</category>
+      </categories>
+      <tags>
+        <tag>webFront</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[vue零碎小细节知识]]></title>
+    <url>%2F2017%2F03%2F10%2Fvue%E9%9B%B6%E7%A2%8E%E5%B0%8F%E7%BB%86%E8%8A%82%E7%9F%A5%E8%AF%86%2F</url>
+    <content type="text"><![CDATA[###细节 侦测到数据变化时，DOM不会立马更新，等到异步队列被清除，也就是下一个事件循环开始时执行更新。想要数据立马更新,用Vue.nextTick(callback)。 v-for插值用v-text或{ {} }，v-text、v-html、{ {} }区别: v-text与{ {} }都可以完成数据的渲染或插值，但是{ {} }在初期，如果数据没加载上来，会显示一些不愿用户看到的字符，但是用v-text就会等数据加载完毕时再显示，就不会出现此问题。 v-html可以解析字符串中的标签,如果是v-text就解析不了，会当做字符串识别。]]></content>
+      <categories>
+        <category>vue</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[vue2+webpack+es6搭建简单项目]]></title>
+    <url>%2F2017%2F03%2F10%2Fvue2-webpack-es6%E6%90%AD%E5%BB%BA%E7%AE%80%E5%8D%95%E9%A1%B9%E7%9B%AE%2F</url>
+    <content type="text"><![CDATA[&emsp;&emsp;在vue在出1.x的时候，就关注过它，不过那时觉得它还不是太出彩，即稳定性、可用性、持久性不是太好，还是选择了angularjs作为项目的前端技术支持。如今，vue2.0已出世，而且其也越来越受欢迎。看见热门博客里总有vue的存在，就马上觉得自己快要out了，这才决心也要好好学学它，不求多精通，至少会用些吧。 在我眼里，vue PK angularjs angularjs优势 强大的后台Google。追随者很多，社区活跃，有发展 改革完善第一人。html属性扩展且包含模板，数据双向绑定，路由，模块化，服务，依赖注入等所有功能，模板功能强大丰富，并且是声明式的，自带了丰富的 Angular 指令 Ionic与angularjs的结合。作为一款html5混合式开发，适合开发丰富和强大的应用程序。 缺点 太大难以下口。 1.0版本与2.0版本相差太大。 不支持IE8以下 vue优势 简单：中文文档清晰健全，简单易学 组合灵巧：用解耦的，可复用的组件组合到应用程序里 快速：异步批处理方式更新dom 小而不拖沓：包小无依赖 小而有力：各功能项封装的很强大，供使用者轻松使用 缺点 后台不硬气，导致影响度不大。现今与阿里Weex合作，且越来越被大家认可，且期待吧 版本没angularjs成熟 不支持IE8 vue与angularjs相似处 双向数据绑定 相似的基础指令在不同的 MVVM 框架中，实现双向数据绑定的技术有所不同。 angularjs 采用“脏值检测”的方式，数据发生变更后，对于所有的数据和视图的绑定关系进行一次检测，识别是否有数据发生了改变，有变化进行处理，可能进一步引发其他数据的改变，所以这个过程可能会循环几次，一直到不再有数据变化发生后，将变更的数据发送到视图，更新页面展现。如果是手动对 ViewModel 的数据进行变更，为确保变更同步到视图，需要手动触发一次“脏值检测”。 vuejs 则使用 ES5 提供的 Object.defineProperty() 方法，监控对数据的操作，从而可以自动触发数据同步。并且，由于是在不同的数据上触发同步，可以精确的将变更发送给绑定的视图，而不是对所有的数据都执行一次检测。 搭建基本架构基本介绍 vue单页面运行也是可以的，但构建一个项目，不仅仅是用到单方面的某个技术，而是结合当下，根据需求搭配技术框架。 vue-cli是官方提供的命令行工具，可快速搭建vue项目，加速开发进度 webpack是当下最热门的前端资源模块化管理和打包工具 es6是JavaScript语言的下一代标准，vue可用es6，通过webpack解析可为目前大多数浏览器识别的js版本，不会影响项目的运行。 软件下载 在windows端，搭建node环境借助npm下载相关包，是非常方便的。所以首先下载node（npm是随同node的），node环境一旦生产，就可以使用了，我自己使用它借助的是git bash，在git bash上输入命令行，可以如在mac上一样随洒自如地操作项目。 搭建步骤 在命令行输入 npm install -g vue-cli ，全局安装vue-cli脚手架 在命令行输入 vue init webpack myapp ，初始化vue + webpack组合的项目构架，其中myapp为项目名 在命令行输入 cd myapp 然后再输入 npm install ，切换到项目根目录下，且安装项目根目录下package.json里面的相关依赖包 在命令行输入 vue run dev vue项目处于开发环境，此时访问http://localhost:8080 ，可看到vue已运行起来，首页为vue默认页面 至此基本构架完毕 主要参数 在vue对象建立时，有属性data、methods、watch。其中data里面的数据，可以被后两者通过this被访问。 在新建vue对象时，如果要使用自定义组件，需要先在components里面注册。]]></content>
+      <categories>
+        <category>vue</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+        <tag>webpack</tag>
+        <tag>es6</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js常用小记录]]></title>
+    <url>%2F2017%2F02%2F02%2Fjs%E5%B8%B8%E7%94%A8%E5%B0%8F%E8%AE%B0%E5%BD%95%2F</url>
+    <content type="text"><![CDATA[一: 自带的函数1) split、splice、slice的区别:http://blog.csdn.net/zpw91/article/details/53705462 Split() Split是切割字符串的一种方法，该方法主要用于把一个字符串分割成字符串数组。var s= ‘how do you do’;var b = s.split(“ ”);//空格分割 how,do,you,do Splice () (会改变本尊数组) Splice ()方法向/从数组中添加/删除元素，然后返回被删除的元素组成的数组。用于数组对象。arr.splice(index, howmany, item1,…, itemX)其中：index必需。整数，规定了添加/删除元素的位置，使用负数可从数组结尾处规定位置。howmany必需。要删除的元素的数量。如果设置为0，则不会删除元素。如果添加元素则这里应该设置为0.itemX可选。向数组添加的新项目。在添加的时候用。 Slice()（不会改变本尊数组） slice()方法主要用于截取数组，并返回截取到的新数组。 数组和字符串对象均可以使用。 arr.slice(start, end) 2) scrollIntoView scrollIntoView(alignWithTop) 滚动浏览器窗口或容器元素，以便在当前视窗的可见范围看见当前元素。如果alignWithTop为true，或者省略它，窗口会尽可能滚动到自身顶部与元素顶部平齐。 3) Object.keys(对象) =&gt; 判断一个对象是否为空 4)enxtype几种方式: application/x-www-form-urlencoded (默认，正常的提交方式)multipart/form-data(有上传文件时常用这种)application/json (ajax常用这种格式)text/xmltext/plain 5）文件上传，不经过form表单提交，可以借用h5的FormData。 例如:const config = { headers: { &apos;Content-Type&apos;: &apos;multipart/form-data&apos; } } let fd = new FormData() fd.append(&apos;file&apos;, this.file) // this.file为上传的文件信息 // fd传过去为data字段，如此post请求，便可以将文件传至后台接收 this.api.postUploadAvatar(fd, config) 6)文件上传时，本地显示: var src=window.URL.createObjectURL(blob)//这里传一个文件对象 例如：file.files[0]img.src=src; 7) css解决ios scroll 不流利, js解决安卓端键盘遮挡https://segmentfault.com/a/1190000008788147 8) requestAnimationFrame requestAnimationFrame与setTimeout和setInterval类似，都是通过递归调用同一个方法不断更新页面。 9）变量// js核心 （提到变量）http://web.jobbole.com/91737/ 以前的作用域只有两种（如果非要加上eval()，那就是三个，即还有eval函数作用域）:全局作用域, 函数作用域（A）。在还是A时，出现了一个术语，叫做“变量提升”。即var声明的变量，在作用域里执行时，会被置到最前面并赋值为undefined。如果此变量已赋值在某位置，只是在后面而已（例如: var x=2），则会再其位置处，将undefined的变量赋为其值（例如赋值为2）。 es6出现后，有了let与const。let与var的区别:1）let 的作用域只在其处于的块级内。2）let没有所谓的“变量提升”(更精确来说，应该是提升了，不过就是不让你用，所以是为“暂时性死区”)。 10）杂项 Rem// rem let html = document.querySelector(&apos;html&apos;) let width = html.getBoundingClientRect().width html.style.fontSize = width / 10 + &apos;px&apos; 手机端禁止缩放// 禁用双指缩放 document.documentElement.addEventListener(&apos;touchstart&apos;, function (event) { if (event.touches.length &gt; 1) { event.preventDefault() } }, false) // 禁用手指双击缩放 let lastTouchEnd = 0 document.documentElement.addEventListener(&apos;touchend&apos;, function (event) { let now = Date.now() if (now - lastTouchEnd &lt;= 300) { event.preventDefault() } lastTouchEnd = now }, false) 解决安卓端键盘遮挡:// input let u = navigator.userAgent let isAndroid = u.indexOf(&apos;Android&apos;) &gt; -1 || u.indexOf(&apos;Adr&apos;) &gt; -1 // android终端 if (isAndroid) { let beforeHeight = document.documentElement.clientHeight window.addEventListener(&apos;resize&apos;, function () { let afterHeight = document.documentElement.clientHeight if ((beforeHeight - afterHeight) &gt; 50) { } else { document.getElementById(&apos;scroll&apos;).style.top = &apos;initial&apos; } }) window.addEventListener(&apos;focusin&apos;, function () { document.getElementById(&apos;scroll&apos;).style.top = -50 + &apos;px&apos; }) window.addEventListener(&apos;focusout&apos;, function () { document.getElementById(&apos;scroll&apos;).style.top = &apos;initial&apos; }) } 或者，简单点：if (/Android/gi.test(navigator.userAgent)) { window.addEventListener(&apos;resize&apos;, function () { if (document.activeElement.tagName === &apos;INPUT&apos; || document.activeElement.tagName === &apos;TEXTAREA&apos;) { window.setTimeout(function () { // document.activeElement.scrollIntoViewIfNeeded() document.activeElement.scrollIntoView(true) }, 300) } }) } 11) 关于for循环1、2、]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[vue与angularjs基础指令]]></title>
+    <url>%2F2016%2F05%2F16%2Fvue%26angularjs%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%2F</url>
+    <content type="text"><![CDATA[学过angularjs的同学，上手vue应该会特别简单。vue从某些方面上来说，就是简版的angularjs。 基础性使用 基础指令相比较 vue angularjs 作用 使用是否相同 不同点 v-if ng-if 条件渲染指令(满足条件才会渲染在html里) 相同 无 v-show ng-show 条件渲染指令(始终会渲染在html里) 相同 无 v-model ng-model 双向数据绑定 相同 无 v-else 无 必须跟在v-if或者v-show的后面 不 angularjs无ng-else v-for ng-repeat 基于一个数组渲染一个列表 相同 无 v-bind ng-bind 前者用于响应地更新html特性后者为单向数据绑定 不同 前者主要用于属性绑定，为真者绑定其值如:&lt;a v-bind:href=&quot;url&quot;&gt;&lt;/a&gt; v-on ng-click 作用一样，用法不一样。v-on的用法与v-bind相似 不同 前者例子:&lt;button v-on:click=&quot;say(&#39;Hi&#39;)&quot;&gt;Hi&lt;/button&gt; 补充 v-bind和v-onv-bind指令可以缩写为一个冒号，v-on指令可以缩写为@符号。完整语法:1&lt;a href="javascripit:void(0)" v-bind:class="activeNumber === n + 1 ? 'active' : ''"&gt;&#123;&#123; n + 1 &#125;&#125;&lt;/a&gt; 缩写语法:1&lt;a href="javascripit:void(0)" :class="activeNumber=== n + 1 ? 'active' : ''"&gt;&#123;&#123; n + 1 &#125;&#125;&lt;/a&gt; 完整语法:1&lt;button v-on:click="greet"&gt;Greet&lt;/button&gt; 缩写语法:1&lt;button @click="greet"&gt;Greet&lt;/button&gt;]]></content>
+      <categories>
+        <category>js框架杂烩</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+        <tag>angular.js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[css 基础经常使用]]></title>
+    <url>%2F2015%2F09%2F22%2Fgit-%E7%BB%8F%E5%B8%B8%E4%BD%BF%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[一、实用率高 端口占用，更换端口 hexo server -p 5555 端口占用，杀死进程 查看：ps -ef|grep 4000查看相关进程并杀死：kill -9 进程号 本地初始化git git initgit add.git commit -m ‘first commit’git status]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+</search>
