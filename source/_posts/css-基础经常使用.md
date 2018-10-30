@@ -2,6 +2,8 @@ title: css 基础经常使用
 author: wangHianHui
 date: 2017-06-27 15:05:11
 tags:
+- css
+categories: ['css']
 ---
 1. 换行省略
         overflow: hidden;
@@ -90,8 +92,98 @@ tags:
       .container { float:left; width:100%; }
       .right{ margin-left:200px; }
       .left{ float:left; margin-left:-100%; }
+
 11.box-sizing
       box-sizing:content-box/border-box/inherit 
       content-box——默认值，采用Standard box model 
       border-box——采用IE box model 
       inherit——继承父元素属性值
+
+12.局部图片滑动 
+* 在要滑动的list img之前，加上父亲元素outer和inner。将
+outer设置为:
+        .outer {
+            position: relative;
+            overflow: hidden;
+            min-height: XX px;
+        }
+        .inner {
+            position: absolute
+            left: 0;
+            right: 0;
+            overflow-x: scroll;
+            overflow-y: hidden;
+        }
+
+  然后 list img正常设置便可。
+
+13.input date的兼容性问题
+* Input date在pc端的兼容性还是比较差的，除了chrome支持以为，其它几乎都不能使用。但在移动端的兼容性还是可以的。故如若在移动端使用，还需要考虑其placeholder的兼容性，因为placeholder仅在pc端显示，在移动端是不支持的。
+        解决方案：
+        通过标签上某个属性的改变,从而仿placeholder，例如:
+        //当有值时，设置其添加class空样式: has-value,没有值时便显示placeholder
+        input[type="date"]:not(.has-value):before {
+          color: grey;
+          content: attr(placeholder);
+        }
+        // 清空placeholder的条件
+        input[readonly]:before {
+            content: '';
+        }
+
+14.JPEG、PNG、SVG
+http://web.jobbole.com/91599/
+> * JPEG适用于亮度与色彩压缩。
+* PNG对于线条图，LOGO，图标和颜色较少的图像非常适合。
+* SVG在线条艺术，LOGO，图标，插画和数据可视化方面用途广泛。
+
+15.头部中部尾部布局
+* 1)头尾fixed,中部absolute
+        html,body{width:100%;height:100%;position:relative;}
+        #body-container{width:100%;height:100%;position:absolute;left:0;top:0;}
+        #header{position:fixed;left:0;top:0;width:100%;height:49px;}
+        #content{position:absolute;left:0;right:0;top:49px;bottom:44px;overflow-y:auto;}
+        #footer{position:fixed;left:0;;bottom:0;width:100%;height:44px;}
+* 2)lex布局（仿照手机淘宝布局）
+        *{margin:0;padding:0;}
+        html,body{width:100%;height:100%;position:relative;}
+        #body-container{width:100%;height:100%;display:flex;flex-direction:column;}
+        #header{height:49px;flex:none;}
+        #content{flex:1 1 auto;overflow-y:auto;}
+        #footer{height:44px;flex:none;}
+
+16.clearfix进化史
+http://web.jobbole.com/85965/
+
+17.宽比成比例的
+        width: 100%;
+        height: 0px;
+        padding-bottom: 50%;
+        display: inline;         
+
+18.pre换行
+        white-space:pre-wrap;
+        word-wrap: break-word; 
+
+19.video的坑
+http://web.jobbole.com/93251/
+
+        <video controls>
+          source src="https://chimee.org/vod/2.webm">
+          source src="https://chimee.org/vod/2.ogg">
+          source src="https://chimee.org/vod/2.mp4">
+          source src='https://chimee.org/x.myvideoext' type='video/mp4; codecs="mp4v.20.8, mp4a.40.2"'>
+          p>当前环境不支持video标签。p>
+        </video>
+
+20.杂项
+- AA:大转盘
+http://www.daxueit.com/article/16703.html
+- BB:移动端问题记录
+http://blog.csdn.net/k513492640/article/details/73997607
+- CC:前端踩坑大杂烩
+http://www.cnblogs.com/fastmover/p/4873765.html
+- DD:rem
+https://mp.weixin.qq.com/s?__biz=MzAxODE2MjM1MA==&mid=2651552493&idx=1&sn=84144094bfcbbca5c3f78907f49d4787&chksm=8025ad2cb752243aa0d6975cbeaf95490810fe456f00f8562bde7aeb3366c0bbd9a4f516271f&scene=0&key=e4a4e74651de5963d522bfff8727ce52c074dbd253178438b52bd5b53a9a5a6d2b20704bf69eb40d56e6f71a42544927d99ef5ac2762df11bd170e348b6aa0b10e751f85db359075f67f7f014cfbf968&ascene=0&uin=MjY2MDUwNzgxOQ%3D%3D&devicetype=iMac+MacBookPro13%2C1+OSX+OSX+10.12.3+build(16D30)&version=12020810&nettype=WIFI&fontScale=100&pass_ticket=2dqCIt261iAAt7GpaL0SRS%2F4Mid9NkzIn3iVdaL5FsJG2e61K0rbo5lgjkV6lkfg
+- EE: 利用视口单位实现适配
+https://aotu.io/notes/2017/04/28/2017-4-28-CSS-viewport-units/              

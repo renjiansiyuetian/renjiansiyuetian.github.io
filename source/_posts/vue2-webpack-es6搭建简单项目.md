@@ -16,6 +16,7 @@ categories: ['vue']
 - 强大的后台Google。追随者很多，社区活跃，有发展
 - 改革完善第一人。html属性扩展且包含模板，数据双向绑定，路由，模块化，服务，依赖注入等所有功能，模板功能强大丰富，并且是声明式的，自带了丰富的 Angular 指令
 - Ionic与angularjs的结合。作为一款html5混合式开发，适合开发丰富和强大的应用程序。
+
 #### 缺点
 -	太大难以下口。
 -	1.0版本与2.0版本相差太大。
@@ -47,14 +48,17 @@ categories: ['vue']
 - vue-cli是官方提供的命令行工具，可快速搭建vue项目，加速开发进度
 - webpack是当下最热门的前端资源模块化管理和打包工具
 - es6是JavaScript语言的下一代标准，vue可用es6，通过webpack解析可为目前大多数浏览器识别的js版本，不会影响项目的运行。
+
 ### 软件下载
 - 在windows端，搭建node环境借助npm下载相关包，是非常方便的。所以首先下载node（npm是随同node的），node环境一旦生产，就可以使用了，我自己使用它借助的是git bash，在git bash上输入命令行，可以如在mac上一样随洒自如地操作项目。
+
 ### 搭建步骤
 - 在命令行输入 `npm install -g vue-cli` ，全局安装vue-cli脚手架
 - 在命令行输入 `vue init webpack myapp` ，初始化vue + webpack组合的项目构架，其中myapp为项目名
 - 在命令行输入 `cd myapp` 然后再输入 `npm install` ，切换到项目根目录下，且安装项目根目录下package.json里面的相关依赖包
 - 在命令行输入 `vue run dev` vue项目处于开发环境，此时访问http://localhost:8080 ，可看到vue已运行起来，首页为vue默认页面
 - 至此基本构架完毕
+
 ### 主要参数
 - 在vue对象建立时，有属性data、methods、watch。其中data里面的数据，可以被后两者通过this被访问。
 - 在新建vue对象时，如果要使用自定义组件，需要先在components里面注册。

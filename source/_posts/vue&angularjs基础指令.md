@@ -1,6 +1,6 @@
 ---
 title: vue与angularjs基础指令
-date: 2017-02-16 10:33:13
+date: 2016-05-16 10:33:13
 tags:  
 - vue
 - angular.js
